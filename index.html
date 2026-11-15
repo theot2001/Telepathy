@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telepathy Tuition | Expert Science & Mathematics Tutoring</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg-light: #f8fafc;
+            --text-main: #334155;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        /* Page Sections */
+        .page-section {
+            display: none;
+            padding: 4rem 5%;
+            min-height: 80vh;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Hero Section (Home) */
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Content Styling */
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Contact Form */
+        form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            background: white;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="#" class="logo" onclick="switchPage('home')">Telepathy Tuition</a>
+        <nav>
+            <a id="nav-home" class="active" onclick="switchPage('home')">Home</a>
+            <a id="nav-about" onclick="switchPage('about')">About Us</a>
+            <a id="nav-contact" onclick="switchPage('contact')">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <h1>Master Science & Mathematics</h1>
+            <p>Expert online tuition tailored for UK GCSE and A-Level students, designed to build deep foundational understanding and top-tier grades.</p>
+            <a href="#contact" class="btn" onclick="switchPage('contact')">Book a Consultation</a>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Targeted Science</h3>
+                <p>Specialist biology, chemistry, and physics coaching focused on tackling core concepts and exam techniques.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Mathematics</h3>
+                <p>Rigorous problem-solving structures designed to take students from foundational marks to Grade 9/A* mastery.</p>
+            </div>
+            <div class="card">
+                <h3>Client Portal & Resources</h3>
+                <p>Access our integrated student management portal to view live schedules, manage bookings, and download revision materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US PAGE -->
+    <section id="about" class="page-section">
+        <h2>About Telepathy Tuition</h2>
+        <p>Founded by specialist educators, <strong>Telepathy Tuition</strong> is a premier online tutoring agency dedicated to transforming how students engage with Science and Mathematics.</p>
+        <p>We combine cutting-edge pedagogical strategies with structured, student-centered learning paths. Whether preparing for GCSE core exams or tackling advanced A-Level concepts, our approach ensures that learners develop genuine scientific and mathematical confidence.</p>
+        
+        <div class="grid" style="margin-top: 3rem;">
+            <div class="card">
+                <h3>Our Philosophy</h3>
+                <p>We believe in high-impact, evidence-informed teaching methods that emphasize clarity, oracy, and systematic error analysis.</p>
+            </div>
+            <div class="card">
+                <h3>Expertise</h3>
+                <p>Specialist educators holding advanced degrees and practical secondary teaching credentials across the sciences and mathematics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US PAGE -->
+    <section id="contact" class="page-section">
+        <h2>Get in Touch</h2>
+        <p>Have questions about our tutoring packages or want to book an initial assessment? Send us a message below.</p>
+        
+        <!-- Replace the action URL with your free form handler like Formspree when ready -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message / Subject Inquiry</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about the student's current year level and goals..."></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Telepathy Tuition. All rights reserved. | <a href="https://telepathytuition.co.uk">telepathytuition.co.uk</a></p>
+    </footer>
+
+    <!-- Simple Page-Switching Script -->
+    <script>
+        function switchPage(pageId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Show target section
+            document.getElementById(pageId).classList.add('active');
+
+            // Highlight target nav link
+            document.getElementById('nav-' + pageId).classList.add('active');
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
