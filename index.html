@@ -17,7 +17,6 @@
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
             --accent-blue: #38bdf8;
-            --accent-indigo: #6366f1;
             --accent-teal: #2dd4bf;
         }
 
@@ -43,7 +42,7 @@
 
         /* Navigation Header */
         header {
-            background: rgba(7, 13, 25, 0.85);
+            background: rgba(7, 13, 25, 0.92);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border-subtle);
@@ -142,6 +141,7 @@
         /* Main Container & Page Sections */
         main {
             flex: 1;
+            width: 100%;
         }
 
         .page-section {
@@ -149,23 +149,17 @@
             padding: 3.5rem 5%;
             max-width: 1120px;
             margin: 0 auto;
-            animation: fadeIn 0.25s ease-out;
         }
 
         .page-section.active {
             display: block;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         /* Hero Section */
         .hero {
             text-align: center;
             padding: 4.5rem 1.75rem;
-            background: linear-gradient(160deg, rgba(19, 31, 56, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+            background: linear-gradient(160deg, rgba(19, 31, 56, 0.92) 0%, rgba(15, 23, 42, 0.96) 100%);
             border-radius: 20px;
             border: 1px solid var(--border-subtle);
             box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
@@ -192,4 +186,488 @@
             color: var(--text-secondary);
             font-weight: 500;
             font-size: 0.84rem;
-            padding: 0.4rem 1rem
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            margin-bottom: 1.75rem;
+        }
+
+        .slogan-pill span {
+            color: var(--accent-teal);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 4.2vw, 3.15rem);
+            color: var(--text-primary);
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.03em;
+            font-weight: 700;
+        }
+
+        .hero h1 .highlight {
+            color: var(--accent-blue);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 2.25rem auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 0.85rem 1.75rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.96rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px -4px rgba(56, 189, 248, 0.35);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        /* Credibility Strip */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin: 2.5rem 0 3.5rem 0;
+        }
+
+        .stat-item {
+            background: var(--bg-surface);
+            padding: 1.5rem;
+            border-radius: 14px;
+            border: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 1.45rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Typography & Cards */
+        h2 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.85rem;
+            letter-spacing: -0.025em;
+            font-weight: 700;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 720px;
+            margin-bottom: 2.25rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .card {
+            background: var(--bg-surface);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-subtle);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--border-glow);
+            background: var(--bg-card);
+        }
+
+        .card h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.65rem;
+            font-weight: 600;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 0.76rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            margin-bottom: 0.85rem;
+            letter-spacing: 0.02em;
+        }
+
+        .badge-teal {
+            background: rgba(45, 212, 191, 0.12);
+            color: var(--accent-teal);
+        }
+
+        /* Twin Feature Box */
+        .twin-feature {
+            background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-card) 100%);
+            border-left: 3px solid var(--accent-teal);
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 1px solid var(--border-subtle);
+            border-right: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 2rem;
+        }
+
+        .twin-feature h3 {
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Layouts & Embed Containers */
+        .two-col-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 2.25rem;
+            align-items: start;
+        }
+
+        @media (max-width: 820px) {
+            .two-col-layout {
+                grid-template-columns: 1fr;
+            }
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+            nav {
+                justify-content: center;
+                gap: 1.15rem;
+            }
+        }
+
+        .widget-shell {
+            background: var(--bg-surface);
+            padding: 1.75rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .tutorbird-embed-wrapper {
+            background: #ffffff;
+            color: #0f172a;
+            padding: 1.75rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+            min-height: 240px;
+        }
+
+        .widget-loading {
+            color: #64748b;
+            font-size: 0.92rem;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .login-wrapper {
+            max-width: 520px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 5%;
+            border-top: 1px solid var(--border-subtle);
+            background: rgba(7, 13, 25, 0.9);
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-top: 4rem;
+        }
+
+        footer strong {
+            color: var(--text-primary);
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <a class="brand-link" onclick="switchPage('home')">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Telepathy Tuition Logo">
+                <rect width="48" height="48" rx="12" fill="#131f38" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5"/>
+                <path d="M15 31C15 23.8203 20.8203 18 28 18H34" stroke="#38bdf8" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M33 17C33 24.1797 27.1797 30 20 30H14" stroke="#2dd4bf" stroke-width="3.2" stroke-linecap="round"/>
+                <circle cx="15" cy="17" r="3.5" fill="#38bdf8"/>
+                <circle cx="33" cy="31" r="3.5" fill="#2dd4bf"/>
+            </svg>
+            <div class="brand-text">
+                <span class="brand-title">Telepathy Tuition</span>
+                <span class="brand-tagline-mini">Founded by twins. Driven by shared understanding.</span>
+            </div>
+        </a>
+
+        <nav>
+            <a id="nav-home" class="active" onclick="switchPage('home')">Home</a>
+            <a id="nav-about" onclick="switchPage('about')">About Us</a>
+            <a id="nav-contact" onclick="switchPage('contact')">Contact & Sign Up</a>
+            <a id="nav-login" class="nav-login-btn" onclick="switchPage('login')">Portal Log-In</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== 1. HOME PAGE ==================== -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="slogan-pill">Founded by twins. <span>Driven by shared understanding.</span></div>
+                <h1>KS2, KS3 & KS4 <span class="highlight">Maths & Science</span> Tuition</h1>
+                <p>Run by a Qualified Teacher and a specialist tutor with 20 years of combined experience—helping students make sense of tough topics and walk into exams prepared.</p>
+                <div class="hero-actions">
+                    <button class="btn" onclick="switchPage('contact')">Book a Consultation</button>
+                    <button class="btn btn-outline" onclick="switchPage('about')">Meet the Founders</button>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <h4>20 Years</h4>
+                    <p>Combined Tuition Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h4>QTS Qualified</h4>
+                    <p>Practising Classroom Teacher</p>
+                </div>
+                <div class="stat-item">
+                    <h4>KS2 – KS4</h4>
+                    <p>Primary, Secondary & GCSE</p>
+                </div>
+                <div class="stat-item">
+                    <h4>1-to-1 Online</h4>
+                    <p>Focused, Interactive Sessions</p>
+                </div>
+            </div>
+
+            <h2>What We Teach</h2>
+            <p class="section-intro">Structured online tuition matched to UK exam boards (AQA, Edexcel, OCR) and classroom expectations.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">KS2 • KS3 • GCSE</span>
+                    <h3>Mathematics</h3>
+                    <p>Strengthening core number fluency in KS2, algebraic reasoning in KS3, and multi-step problem-solving for Foundation and Higher GCSE papers.</p>
+                </div>
+                <div class="card">
+                    <span class="badge badge-teal">KS2 • KS3 • GCSE</span>
+                    <h3>Biology, Chemistry & Physics</h3>
+                    <p>Clear explanations of tricky concepts, required practicals, and how to pick up full marks on extended-response exam questions.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Our Approach</span>
+                    <h3>Fixing Misconceptions Fast</h3>
+                    <p>Instead of repeating the same explanation louder, we spot exactly where a student's thinking went off track and rebuild from solid ground.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. ABOUT US PAGE ==================== -->
+        <section id="about" class="page-section">
+            <span class="badge badge-teal">About Us</span>
+            <h2>Identical Twins. Two Angles on Every Problem.</h2>
+            <p class="section-intro">Telepathy Tuition was built around a simple advantage: two identical twins who have spent a combined 20 years teaching Maths and Science.</p>
+
+            <div class="twin-feature">
+                <h3>Why Learn With Twins?</h3>
+                <p>Growing up identical, you quickly notice how two people can look at the exact same problem and picture it completely differently. That instinct sits at the heart of how we teach.</p>
+                <p style="margin-bottom: 0;">When a student gets stuck, it is rarely because they aren't capable—it is usually because the explanation hasn't matched how they think yet. Having two complementary teaching styles means we can switch mental models on the spot until a topic clicks.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">Co-Founder</span>
+                    <h3>Qualified Secondary Teacher (QTS)</h3>
+                    <p>Brings current UK classroom experience across KS3 and KS4 Science and Maths, direct insight into GCSE mark schemes, and structured routines that reduce cognitive overload.</p>
+                </div>
+                <div class="card">
+                    <span class="badge badge-teal">Co-Founder</span>
+                    <h3>Specialist Private Tutor</h3>
+                    <p>Brings years of dedicated one-to-one coaching across KS2, KS3, and GCSE—focusing on steady confidence-building, exam pacing, and closing gaps left by missed schoolwork.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem; text-align: center;">
+                <h3>20 Years of Combined Experience</h3>
+                <p style="max-width: 640px; margin: 0 auto 1.5rem auto;">Whether your child needs steady primary foundations, a confidence boost in Year 8, or targeted GCSE revision, we tailor every session to where they are right now.</p>
+                <button class="btn" onclick="switchPage('contact')">Enquire About Availability</button>
+            </div>
+        </section>
+
+        <!-- ==================== 3. CONTACT & SIGN UP PAGE ==================== -->
+        <section id="contact" class="page-section">
+            <span class="badge">Get Started</span>
+            <h2>Contact & Student Sign-Up</h2>
+            <p class="section-intro">Fill in your details below to register your interest or book an initial chat. Submissions go straight into our system and email inbox.</p>
+
+            <div class="two-col-layout">
+                <div>
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3>What Happens Next</h3>
+                        <p><strong style="color: var(--text-primary);">1. Send an Enquiry:</strong> Let us know your child's year group, subject(s), and what they find hardest.</p>
+                        <p><strong style="color: var(--text-primary);">2. Quick Consultation:</strong> We arrange a brief call to discuss goals and match the right lesson slot.</p>
+                        <p style="margin-bottom: 0;"><strong style="color: var(--text-primary);">3. Portal Access:</strong> You receive your TutorBird login to view lesson dates, notes, and invoices in one place.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Direct Email</h3>
+                        <p style="margin-bottom: 0;">Prefer to write to us directly?<br>
+                        <strong style="color: var(--accent-blue);">enquiries@telepathytuition.co.uk</strong></p>
+                    </div>
+                </div>
+
+                <!-- Live TutorBird Contact & Sign-Up Widget -->
+                <div class="widget-shell">
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.15rem;">Student Registration</h3>
+                    <div id="tb-contact-wrapper" class="tutorbird-embed-wrapper">
+                        <div class="widget-loading">Loading registration form...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. STUDENT LOG-IN PAGE ==================== -->
+        <section id="login" class="page-section">
+            <div class="login-wrapper">
+                <span class="badge">Client Portal</span>
+                <h2>Student & Parent Log-In</h2>
+                <p>Sign in below to view upcoming sessions, join online lessons, check homework notes, and manage billing.</p>
+
+                <div class="widget-shell" style="margin-top: 2rem; text-align: left;">
+                    <div id="tb-login-wrapper" class="tutorbird-embed-wrapper">
+                        <div class="widget-loading">Loading portal login...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Telepathy Tuition</strong> — Founded by twins. Driven by shared understanding.</p>
+        <p>KS2, KS3 & KS4 Maths and Science Tuition</p>
+        <p style="margin-top: 0.75rem; font-size: 0.82rem;">© 2026 Telepathy Tuition. All rights reserved. • <a href="https://telepathytuition.co.uk">telepathytuition.co.uk</a></p>
+    </footer>
+
+    <!-- SAFE PAGE NAVIGATION & LAZY WIDGET LOADER -->
+    <script>
+        const loadedWidgets = {
+            contact: false,
+            login: false
+        };
+
+        function loadTutorBirdWidget(type) {
+            if (loadedWidgets[type]) return;
+            loadedWidgets[type] = true;
+
+            const config = {
+                contact: {
+                    containerId: 'tb-contact-wrapper',
+                    src: 'https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF92VGdKUCIsIldlYnNpdGVJRCI6Indic19kV3pKRyIsIldlYnNpdGVCbG9ja0lEIjoid2JiX3pWTXhnSnEifQ=='
+                },
+                login: {
+                    containerId: 'tb-login-wrapper',
+                    src: 'https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF92VGdKUCIsIldlYnNpdGVJRCI6Indic19kV3pKRyIsIldlYnNpdGVCbG9ja0lEIjoid2JiX3pWTXhGSjEifQ=='
+                }
+            };
+
+            const target = config[type];
+            const container = document.getElementById(target.containerId);
+            if (!container) return;
+
+            container.innerHTML = '';
+            const script = document.createElement('script');
+            script.src = target.src;
+            script.async = true;
+            container.appendChild(script);
+        }
+
+        function switchPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const targetSection = document.getElementById(pageId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            const targetNav = document.getElementById('nav-' + pageId);
+            if (targetNav) {
+                targetNav.classList.add('active');
+            }
+
+            if (pageId === 'contact' || pageId === 'login') {
+                loadTutorBirdWidget(pageId);
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
